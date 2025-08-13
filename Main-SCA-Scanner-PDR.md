@@ -1576,7 +1576,7 @@ parser-validation/
 - **Edge Case Handling**: Correctly rejects invalid test artifacts
 - **Enterprise Validation**: Proven on 1,229-package production codebase
 
-**Reference**: Complete details in [Parser-Validation-PDR.md](./Parser-Validation-PDR.md) and [Python-Parser-Validation-PDR.md](./Python-Parser-Validation-PDR.md)
+**Reference**: Complete details in [Parser-Validation-PDR.md](./design-docs/Parser-Validation-PDR.md) and [Python-Parser-Validation-PDR.md](./design-docs/Python-Parser-Validation-PDR.md)
 
 ### **Integration Testing Requirements**
 1. **CLI Execution**: Verify `python -m [package_name]` works without errors

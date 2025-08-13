@@ -542,7 +542,7 @@ This system establishes a new paradigm for vulnerability management that respect
 - [removed] - Real-world monorepo analysis
 
 ### Documentation
-- `RECOMMENDATION_STRATEGIES.md` - Strategy system documentation
+- `../supporting-docs/RECOMMENDATION_STRATEGIES.md` - Strategy system documentation
 - This PDR - Complete location-aware system specification
 
 ### Configuration Examples

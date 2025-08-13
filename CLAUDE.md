@@ -21,16 +21,17 @@ SCA/
 │
 ├── Main-SCA-Scanner-PDR.md                 # 🎯 CORE PDR (primary product)
 │
-├── Parser-Validation-PDR.md                # 🔧 PARSER PDRs (categorized)
-├── Python-Parser-Validation-PDR.md         
-├── JavaScript-Parser-Validation-PDR.md     
+├── design-docs/                            # 🔧 DESIGN DOCUMENTS
+│   ├── Parser-Validation-PDR.md           # Parser validation framework
+│   ├── Python-Parser-Validation-PDR.md    # Python-specific validation
+│   ├── JavaScript-Parser-Validation-PDR.md # JavaScript-specific validation     
 │
-├── PDR-Location-Aware-Recommendations.md   # 🎨 FEATURE PDRs
+│   ├── PDR-Location-Aware-Recommendations.md # Feature specifications
 │
-├── Data-Completeness-vs-Practical-Utility-Research.md  # 🔬 RESEARCH PDRs
+│   ├── Data-Completeness-vs-Practical-Utility-Research.md # Research findings
 │
-├── Cross-Platform-Validation-Summary.md   # ✅ VALIDATION PDRs
-├── Validation-Report-Enterprise-Scale.md  
+│   ├── Cross-Platform-Validation-Summary.md # Validation results
+│   └── Validation-Report-Enterprise-Scale.md # Enterprise testing  
 │
 ├── supporting-docs/                        # 📋 SUPPORTING (secondary value)
 │   ├── AI-Agent-Implementation-Guide.md   

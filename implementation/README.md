@@ -624,7 +624,7 @@ Per Package Analysis (Balanced Efficiency):
 
 The scanner includes a comprehensive validation framework ensuring 100% accuracy in dependency detection:
 
-- **[Python Parser Validation PDR v2.0](../Python-Parser-Validation-PDR.md)** - Complete validation framework
+- **[Python Parser Validation PDR v2.0](../design-docs/Python-Parser-Validation-PDR.md)** - Complete validation framework
 - **UV Lock Support** - Full uv.lock format parsing with transitive dependencies
 - **Enhanced Poetry** - Advanced poetry.lock handling with complex dependency graphs
 - **Test-Driven Validation** - Comprehensive test suite with real-world validation

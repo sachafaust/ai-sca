@@ -162,7 +162,7 @@ MIT License - See LICENSE file for details
 ## 🔗 Related Documents
 
 - [Product Design Requirements](Main-SCA-Scanner-PDR.md) - Complete technical specifications
-- [Parser Validation Reports](Parser-Validation-PDR.md) - Language-specific parser testing
+- [Parser Validation Reports](design-docs/Parser-Validation-PDR.md) - Language-specific parser testing
 - [API Reference](supporting-docs/API-Reference-Complete.md) - Complete API documentation
 - [Telemetry Implementation](implementation/TELEMETRY_IMPLEMENTATION.md) - Metrics and monitoring details
 
