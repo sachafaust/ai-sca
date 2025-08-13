@@ -1,0 +1,24 @@
+# Balanced Security Strategy (Default)
+# Balances security improvements with system stability
+name: "balanced_security"
+description: "Balance security improvements with stability"
+
+# Severity-based priority mapping
+severity_priorities:
+  critical: "immediate"
+  high: "high" 
+  medium: "medium"
+  low: "low"
+
+# Version upgrade constraints
+upgrade_constraints:
+  max_version_jump: "minor"       # patch, minor, major, any
+  allow_breaking_changes: false
+  max_effort_level: "medium"      # trivial, low, medium, high, complex
+  prefer_stable_releases: true
+
+# Advanced configuration
+minimum_fix_threshold: null       # Only fix this severity and above (null = all)
+batch_upgrades_preferred: false
+zero_downtime_required: false
+compliance_mode: false
