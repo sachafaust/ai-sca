@@ -1,0 +1,24 @@
+# Conservative Stability Strategy
+# Prioritizes system stability over speed of security fixes
+name: "conservative_stability"
+description: "Prioritize stability over speed of security fixes"
+
+# Severity-based priority mapping (more conservative)
+severity_priorities:
+  critical: "high"          # Not immediate - analyze first
+  high: "medium"
+  medium: "low"
+  low: "deferred"
+
+# Very restrictive upgrade constraints
+upgrade_constraints:
+  max_version_jump: "patch"       # Only patch-level upgrades
+  allow_breaking_changes: false
+  max_effort_level: "low"         # Keep changes minimal
+  prefer_stable_releases: true
+
+# Advanced configuration for production systems
+minimum_fix_threshold: "HIGH"     # Only fix HIGH and CRITICAL
+batch_upgrades_preferred: true    # Batch changes together
+zero_downtime_required: true      # No service interruption
+compliance_mode: false

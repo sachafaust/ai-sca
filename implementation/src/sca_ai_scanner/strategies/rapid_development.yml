@@ -1,0 +1,24 @@
+# Rapid Development Strategy
+# Quick fixes that don't slow development velocity
+name: "rapid_development"
+description: "Quick fixes that don't slow development velocity"
+
+# Focus on critical issues only to maintain dev speed
+severity_priorities:
+  critical: "immediate"
+  high: "high"
+  medium: "low"             # Defer medium to avoid disruption
+  low: "deferred"           # Ignore low priority
+
+# Minimal disruption upgrade constraints
+upgrade_constraints:
+  max_version_jump: "minor"       # Minor versions only
+  allow_breaking_changes: false  # No API breaks
+  max_effort_level: "low"         # Keep effort minimal
+  prefer_stable_releases: true
+
+# Advanced configuration for active development
+minimum_fix_threshold: "HIGH"     # Only fix HIGH and CRITICAL
+batch_upgrades_preferred: false   # Quick individual fixes
+zero_downtime_required: false     
+compliance_mode: false
