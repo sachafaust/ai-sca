@@ -77,7 +77,7 @@ config/development.yml
 # Logs
 *.log
 logs/
-telemetry/
+/telemetry/
 *.jsonl
 
 # Cache
