@@ -86,14 +86,6 @@ sca_ai_scanner/
 └── config/           # Configuration management
 ```
 
-## 📊 Validation & Testing
-
-- **Test Coverage**: 336 passing tests across unit and integration suites
-- **Python Parser**: 100% Semgrep parity achieved, supports pip, poetry, pipenv, uv.lock formats
-- **JavaScript/TypeScript Parser**: 100% compatibility on npm, yarn, pnpm package files
-- **Real-World Validation**: Tested on actual open-source projects including React, Vue.js, Django, Flask
-- **Parser Framework**: Systematic validation using test suites from pip-tools, npm/semver, and yarn
-
 ## 🎯 Use Cases
 
 1. **CI/CD Integration**: Fast vulnerability scanning in pipelines
