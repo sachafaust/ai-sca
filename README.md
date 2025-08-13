@@ -17,12 +17,6 @@ A small side project to explore how AI models can be applied to a problem space 
 - **Comprehensive telemetry**: Cost tracking, performance metrics, and usage analytics
 - **Multiple output formats**: JSON for automation, Markdown for human review
 
-### Performance
-- **Speed**: <30 minutes for 1000+ dependencies (vs 5+ hours traditional)
-- **Cost**: <$0.75 per 1000 packages analyzed
-- **Accuracy**: 95%+ vulnerability detection rate
-- **Efficiency**: 100x+ improvement in API call reduction
-
 ## 📦 Installation
 
 ```bash
