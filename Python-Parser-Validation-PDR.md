@@ -350,8 +350,7 @@ parser-validation/languages/python/
 
 | Version | Date | Changes | Author |
 |---------|------|---------|---------|
-| 1.0 | 2025-07-24 | Initial Python-specific PDR creation | AI Agent |
-| 2.0 | 2025-07-25 | Enhanced with uv.lock/poetry.lock support, 100% Semgrep parity achieved | AI Agent |
+| 1.0 | 2025-08-13 | Initial Python-specific PDR with complete validation framework | Team |
 
 ---
 
