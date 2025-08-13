@@ -2,6 +2,8 @@
 
 A small side project to explore how AI models can be applied to a problem space I know well—software composition analysis. The goal is to experiment with using AI for bulk scanning and potential resolution of vulnerabilities in Python, JavaScript, and TypeScript dependencies, rather than following the traditional sequential API-driven approach. This isn't intended to be the fastest or most complete solution—just a way for me to learn by building, test some ideas, and hopefully spark discussion. Feedback, suggestions, and "what if you tried…" thoughts from the community are welcome.
 
+> 📘 **Full Technical Specification**: See [AI-Scanner-Specification.md](AI-Scanner-Specification.md) for the complete design document, architecture details, and implementation requirements.
+
 ## 🚀 Key Innovation
 
 **Traditional SCA scanners**: Sequential API calls to vulnerability databases (1 package = 1 API call)  
