@@ -5,9 +5,7 @@ A small side project to explore how AI models can be applied to a problem space 
 ## 🚀 Key Innovation
 
 **Traditional SCA scanners**: Sequential API calls to vulnerability databases (1 package = 1 API call)  
-**This scanner**: Bulk AI analysis using context windows (75+ packages = 1 API call)
-
-By utilizing modern AI models' massive context windows (128K+ tokens), we can analyze hundreds of dependencies simultaneously, transforming vulnerability scanning from a sequential bottleneck into massively parallel processing.
+**This scanner**: By leveraging modern AI models with large context windows (128K+ tokens), we can analyze a very large number of dependencies in a single request. For Python, JavaScript, and TypeScript—where individual dependency manifests are relatively small—this often means processing hundreds, or even thousands of packages at once, depending on the model used. This shifts vulnerability scanning from a sequential, API-bound process into a highly parallelized workflow, dramatically reducing the overhead of scanning at scale.
 
 ## ✨ Features
 
