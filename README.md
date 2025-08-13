@@ -1,6 +1,6 @@
 # AI-Powered SCA Vulnerability Scanner
 
-An innovative Software Composition Analysis (SCA) scanner that leverages AI models for bulk vulnerability analysis, achieving 100x+ performance improvements over traditional sequential API-based scanners.
+A small side project to explore how AI models can be applied to a problem space I know well—software composition analysis. The goal is to experiment with using AI for bulk scanning and potential resolution of vulnerabilities in Python, JavaScript, and TypeScript dependencies, rather than following the traditional sequential API-driven approach. This isn't intended to be the fastest or most complete solution—just a way for me to learn by building, test some ideas, and hopefully spark discussion. Feedback, suggestions, and "what if you tried…" thoughts from the community are welcome.
 
 ## 🚀 Key Innovation
 
