@@ -147,7 +147,7 @@ Contributions are welcome! The project uses:
 - [Product Design Requirements](AI-Scanner-Specification.md) - Complete technical specifications
 - [Parser Validation Reports](design-docs/Parser-Validation-PDR.md) - Language-specific parser testing
 - [API Reference](supporting-docs/API-Reference-Complete.md) - Complete API documentation
-- [Telemetry Implementation](implementation/TELEMETRY_IMPLEMENTATION.md) - Metrics and monitoring details
+- [Telemetry Implementation](design-docs/TELEMETRY_IMPLEMENTATION.md) - Metrics and monitoring details
 
 ## 🌟 Innovation Highlights
 
