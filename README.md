@@ -114,7 +114,7 @@ sca_ai_scanner/
 This project pioneered a unique AI-first development approach using Product Design Requirements (PDR) combined with AI agent implementation directives.
 
 ### Key Files
-- **`Main-SCA-Scanner-PDR.md`**: Complete technical specifications and requirements
+- **`AI-Scanner-Specification.md`**: Complete technical specifications and requirements
 - **`CLAUDE.md`**: AI agent implementation framework for Claude Code
 - **`build.prompt`**: Universal engineering directives for any AI coding agent
 
@@ -161,7 +161,7 @@ MIT License - See LICENSE file for details
 
 ## 🔗 Related Documents
 
-- [Product Design Requirements](Main-SCA-Scanner-PDR.md) - Complete technical specifications
+- [Product Design Requirements](AI-Scanner-Specification.md) - Complete technical specifications
 - [Parser Validation Reports](design-docs/Parser-Validation-PDR.md) - Language-specific parser testing
 - [API Reference](supporting-docs/API-Reference-Complete.md) - Complete API documentation
 - [Telemetry Implementation](implementation/TELEMETRY_IMPLEMENTATION.md) - Metrics and monitoring details

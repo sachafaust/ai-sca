@@ -19,7 +19,7 @@ SCA/
 ├── CLAUDE.md                               # This file - AI agent framework & mental model
 ├── README.md                               # Project overview
 │
-├── Main-SCA-Scanner-PDR.md                 # 🎯 CORE PDR (primary product)
+├── AI-Scanner-Specification.md             # 🎯 CORE SPECIFICATION (primary product)
 │
 ├── design-docs/                            # 🔧 DESIGN DOCUMENTS
 │   ├── Parser-Validation-PDR.md           # Parser validation framework
@@ -52,7 +52,7 @@ SCA/
 ### 2. PDR Organization
 - **Flat structure** for PDRs at root level (high visibility)
 - **Categorization by prefix** (Parser-, Validation-, etc.)
-- **Core PDR** (Main-SCA-Scanner-PDR.md) as the primary entry point
+- **Core Specification** (AI-Scanner-Specification.md) as the primary entry point
 
 ### 3. Supporting Documentation
 - Place in `supporting-docs/` subfolder
@@ -142,7 +142,7 @@ SCA/
 ### Build Process & Implementation Directives
 
 #### Primary Implementation Task
-Implement the AI-Powered SCA Vulnerability Scanner according to the Product Design Requirements (PDR) defined in `Main-SCA-Scanner-PDR.md`.
+Implement the AI-Powered SCA Vulnerability Scanner according to the Product Design Requirements defined in `AI-Scanner-Specification.md`.
 
 **Implementation Location**: Create all implementation files in the `implementation/` folder to keep the project organized and separate from documentation.
 

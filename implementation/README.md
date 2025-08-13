@@ -2,7 +2,7 @@
 
 Enterprise-grade vulnerability scanning powered by Large Language Models. Built with **AI Agent First** principles for autonomous security workflows and seamless AI-to-AI communication.
 
-> **Implementation based on [PDR v1.0](../Main-SCA-Scanner-PDR.md)** - Product Design Requirements drive all versioning and features.
+> **Implementation based on [Specification v1.0](../AI-Scanner-Specification.md)** - Technical specifications drive all versioning and features.
 
 ## ✨ Key Features
 

@@ -1,4 +1,4 @@
-# Product Design Requirements (PDR): AI-Powered SCA Vulnerability Analysis
+# AI Scanner Specification: AI-Powered SCA Vulnerability Analysis
 
 **Document Version:** 1.0  
 **Last Updated:** August 13, 2025  
@@ -62,13 +62,13 @@
 
 | Version | Date | Changes | Status |
 |---------|------|---------|--------|
-| 1.0 | August 13, 2025 | Initial PDR with complete AI-powered SCA scanner design and implementation | ✅ Initial Release |
+| 1.0 | August 13, 2025 | Initial specification with complete AI-powered SCA scanner design and implementation | ✅ Initial Release |
 
 ---
 
 ## 📋 Overview
 
-This Product Design Requirements (PDR) document outlines the design and implementation of an AI-powered SCA vulnerability scanner, designed with an **AI Agent First** philosophy where everything is optimized for autonomous AI agent operation. The solution enables bulk dependency analysis with balanced token efficiency, prioritizing data accuracy and usefulness while maintaining reasonable cost efficiency.
+This specification document outlines the design and implementation of an AI-powered SCA vulnerability scanner, designed with an **AI Agent First** philosophy where everything is optimized for autonomous AI agent operation. The solution enables bulk dependency analysis with balanced token efficiency, prioritizing data accuracy and usefulness while maintaining reasonable cost efficiency.
 
 ### **Proposed Solution**
 AI-powered bulk vulnerability analysis designed for AI Agent First operation, with balanced token efficiency, intelligent batching, and pure AI analysis for accurate, fast, and cost-effective dependency scanning.
