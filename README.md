@@ -140,10 +140,6 @@ Contributions are welcome! The project uses:
 - TDD approach with comprehensive test coverage
 - AI-first design principles
 
-## 📄 License
-
-MIT License - See LICENSE file for details
-
 ## 🔗 Related Documents
 
 - [Product Design Requirements](AI-Scanner-Specification.md) - Complete technical specifications

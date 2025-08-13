@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "AI-powered SCA vulnerability scanner optimized for AI agent first operation"
 readme = "README.md"
 requires-python = ">=3.9"
-license = {text = "MIT"}
+# license = {text = "MIT"}  # TODO: Decide on license
 authors = [
     {name = "SCA Scanner Team", email = "security@company.com"}
 ]
@@ -16,7 +16,7 @@ keywords = ["security", "vulnerability", "scanner", "ai", "sca", "dependencies"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
+    # "License :: OSI Approved :: MIT License",  # TODO: Uncomment when license is decided
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
