@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "test_name": "py-requirements-vulns",
+    "description": "Python requirements.txt with known vulnerabilities for SCA validation",
+    "created": "2024-01-15",
+    "language": "python",
+    "package_manager": "pip"
+  },
+  "expected_vulnerabilities": [
+    {
+      "package": "Django",
+      "current_version": "2.2.10",
+      "vulnerabilities": [
+        {
+          "cve": "CVE-2020-7471",
+          "severity": "high",
+          "cvss_score": 7.5,
+          "description": "SQL injection vulnerability in QuerySet.order_by()"
+        },
+        {
+          "cve": "CVE-2020-9402",
+          "severity": "medium",
+          "cvss_score": 5.3,
+          "description": "Tolerance for incorrect Content-Transfer-Encoding"
+        }
+      ],
+      "remediation": {
+        "fixed_version": "2.2.28",
+        "alternative_version": "3.2.18",
+        "breaking_changes": false,
+        "update_command": "pip install Django==2.2.28",
+        "effort": "low",
+        "notes": "Stay on 2.2.x for compatibility or upgrade to 3.2.x LTS"
+      }
+    },
+    {
+      "package": "Flask",
+      "current_version": "0.12.2",
+      "vulnerabilities": [
+        {
+          "cve": "CVE-2018-1000656",
+          "severity": "high",
+          "cvss_score": 7.5,
+          "description": "Denial of Service via crafted JSON"
+        },
+        {
+          "cve": "CVE-2019-1010083",
+          "severity": "high",
+          "cvss_score": 7.5,
+          "description": "Unexpected memory usage via crafted encoded JSON"
+        }
+      ],
+      "remediation": {
+        "fixed_version": "1.1.4",
+        "breaking_changes": true,
+        "update_command": "pip install Flask==1.1.4",
+        "effort": "medium",
+        "breaking_change_notes": "Major version change, review application compatibility"
+      }
+    },
+    {
+      "package": "requests",
+      "current_version": "2.19.1",
+      "vulnerability": {
+        "cve": "CVE-2018-18074",
+        "severity": "medium",
+        "cvss_score": 5.3,
+        "description": "Insufficient validation of host headers"
+      },
+      "remediation": {
+        "fixed_version": "2.20.0",
+        "breaking_changes": false,
+        "update_command": "pip install requests==2.20.0",
+        "effort": "low"
+      }
+    },
+    {
+      "package": "PyYAML",
+      "current_version": "5.1",
+      "vulnerabilities": [
+        {
+          "cve": "CVE-2020-1747",
+          "severity": "critical",
+          "cvss_score": 9.8,
+          "description": "Arbitrary code execution via full_load()"
+        },
+        {
+          "cve": "CVE-2020-14343",
+          "severity": "critical",
+          "cvss_score": 9.8,
+          "description": "Arbitrary code execution in FullLoader"
+        }
+      ],
+      "remediation": {
+        "fixed_version": "5.4.1",
+        "breaking_changes": false,
+        "update_command": "pip install PyYAML==5.4.1",
+        "effort": "low",
+        "notes": "Critical security fix, update immediately"
+      }
+    },
+    {
+      "package": "urllib3",
+      "current_version": "1.24.1",
+      "vulnerabilities": [
+        {
+          "cve": "CVE-2019-11324",
+          "severity": "high",
+          "cvss_score": 7.5,
+          "description": "SSL certificate validation bypass"
+        },
+        {
+          "cve": "CVE-2020-26137",
+          "severity": "medium",
+          "cvss_score": 6.5,
+          "description": "CRLF injection in request headers"
+        }
+      ],
+      "remediation": {
+        "fixed_version": "1.26.5",
+        "breaking_changes": false,
+        "update_command": "pip install urllib3==1.26.5",
+        "effort": "low"
+      }
+    },
+    {
+      "package": "Jinja2",
+      "current_version": "2.10",
+      "vulnerabilities": [
+        {
+          "cve": "CVE-2019-10906",
+          "severity": "high",
+          "cvss_score": 8.6,
+          "description": "Sandbox escape vulnerability"
+        },
+        {
+          "cve": "CVE-2020-28493",
+          "severity": "medium",
+          "cvss_score": 5.3,
+          "description": "ReDOS vulnerability in urlize filter"
+        }
+      ],
+      "remediation": {
+        "fixed_version": "2.11.3",
+        "breaking_changes": false,
+        "update_command": "pip install Jinja2==2.11.3",
+        "effort": "low"
+      }
+    },
+    {
+      "package": "Werkzeug",
+      "current_version": "0.15.2",
+      "vulnerability": {
+        "cve": "CVE-2020-28724",
+        "severity": "medium",
+        "cvss_score": 5.3,
+        "description": "Open redirect vulnerability"
+      },
+      "remediation": {
+        "fixed_version": "0.16.1",
+        "breaking_changes": false,
+        "update_command": "pip install Werkzeug==0.16.1",
+        "effort": "low"
+      }
+    },
+    {
+      "package": "cryptography",
+      "current_version": "2.8",
+      "vulnerability": {
+        "cve": "CVE-2020-36242",
+        "severity": "critical",
+        "cvss_score": 9.1,
+        "description": "Memory corruption in Rust implementation"
+      },
+      "remediation": {
+        "fixed_version": "3.3.2",
+        "breaking_changes": true,
+        "update_command": "pip install cryptography==3.3.2",
+        "effort": "medium",
+        "breaking_change_notes": "API changes, review cryptographic operations"
+      }
+    },
+    {
+      "package": "Pillow",
+      "current_version": "6.2.1",
+      "vulnerabilities": [
+        {
+          "cve": "CVE-2020-5312",
+          "severity": "critical",
+          "cvss_score": 9.8,
+          "description": "Buffer overflow in PCX decoder"
+        },
+        {
+          "cve": "CVE-2020-5313",
+          "severity": "high",
+          "cvss_score": 7.5,
+          "description": "Buffer overflow in FLI decoder"
+        }
+      ],
+      "remediation": {
+        "fixed_version": "7.1.0",
+        "breaking_changes": false,
+        "update_command": "pip install Pillow==7.1.0",
+        "effort": "low"
+      }
+    },
+    {
+      "package": "numpy",
+      "current_version": "1.16.0",
+      "vulnerability": {
+        "cve": "CVE-2019-6446",
+        "severity": "critical",
+        "cvss_score": 9.8,
+        "description": "Arbitrary code execution via crafted pickle data"
+      },
+      "remediation": {
+        "fixed_version": "1.16.3",
+        "breaking_changes": false,
+        "update_command": "pip install numpy==1.16.3",
+        "effort": "low"
+      }
+    }
+  ],
+  "statistics": {
+    "total_vulnerabilities": 16,
+    "total_packages_affected": 10,
+    "by_severity": {
+      "critical": 6,
+      "high": 6,
+      "medium": 4,
+      "low": 0
+    },
+    "fixable": 16,
+    "breaking_changes": 2,
+    "average_cvss": 7.5
+  },
+  "test_expectations": {
+    "minimum_detection_rate": 0.95,
+    "acceptable_false_positives": 0,
+    "scan_time_limit_seconds": 60,
+    "should_detect_all_cves": true,
+    "should_recommend_fixes": true,
+    "should_identify_breaking_changes": true
+  }
+}
