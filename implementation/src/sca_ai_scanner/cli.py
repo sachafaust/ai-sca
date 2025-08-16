@@ -18,7 +18,7 @@ from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich import print as rprint
 
-from .core.client import AIVulnerabilityClient
+from .core.dspy_ai_client import DSPyAIVulnerabilityClient
 from .core.models import ScanConfig, VulnerabilityResults
 from .core.recommendation_strategies import StrategyManager
 from .core.location_aware_config import LocationAwareConfig
@@ -33,6 +33,7 @@ from .exceptions import (
     AuthenticationError, BudgetExceededError, UnsupportedModelError,
     ConfigurationError
 )
+# DSPy is now core - no separate integration needed
 
 # Setup logging
 logging.basicConfig(
@@ -292,24 +293,25 @@ async def async_main(**kwargs):
     config_manager = ConfigManager(kwargs.get('config'))
     scan_config = create_scan_config(kwargs, config_manager)
     
-    # Validate environment and configuration
-    validate_environment(scan_config)
+    # Note: Environment validation removed - DSPy client handles API key detection internally
     
     if not quiet:
         print_banner(scan_config)
     
+    # DSPy is now integrated into the core AI client - no separate initialization needed
+    
     # Initialize telemetry
+    telemetry_dir = kwargs['telemetry_file'].parent if kwargs['telemetry_file'] else Path('./telemetry')
     telemetry = TelemetryEngine(
-        output_file=kwargs['telemetry_file'],
-        level=kwargs['telemetry_level']
+        export_directory=str(telemetry_dir)
     )
     
     # Start scan
     scan_start_time = asyncio.get_event_loop().time()
     
     try:
-        # Initialize AI client
-        async with AIVulnerabilityClient(scan_config) as ai_client:
+        # Initialize DSPy AI client
+        async with DSPyAIVulnerabilityClient(scan_config) as ai_client:
             
             # AI-only approach - no external validation needed
             
@@ -446,14 +448,14 @@ def print_banner(config: ScanConfig):
         data_source = "AI Training Knowledge (cutoff: varies by model)"
         data_freshness = "Training cutoff date - may miss recent CVEs"
     
-    banner_text = f"""[bold cyan]🤖 AI Agent First SCA Scanner[/bold cyan]
+    banner_text = f"""[bold cyan]🤖 DSPy-Powered SCA Scanner[/bold cyan]
    🎯 Model: {config.model}
    🔍 Data Source: {data_source}
-   🔄 Agentic workflow: INPUT → SCAN → ANALYSIS → REMEDIATION
+   🧠 AI Processing: DSPy structured reasoning with intelligent fallbacks
    📊 Data Freshness: {data_freshness}
    ✅ Data Integrity: COMPLETE results - NO sampling or truncation"""
     
-    console.print(Panel(banner_text, title="AI-Powered SCA Scanner", border_style="cyan"))
+    console.print(Panel(banner_text, title="DSPy-Powered SCA Scanner", border_style="cyan"))
 
 
 async def discover_dependencies(target_path: Path, telemetry: TelemetryEngine) -> list:
@@ -590,9 +592,13 @@ def print_table_results(results: VulnerabilityResults, duration: float):
     summary = results.vulnerability_summary
     
     # Summary header
-    rprint(f"\n[bold green]🤖 AI Agent First SCA Scanner Results[/bold green]")
+    analysis_mode = results.scan_metadata.get('analysis_mode', 'unknown')
+    mode_icon = "🧠" if analysis_mode == 'structured_dspy' else "🔄"
+    
+    rprint(f"\n[bold green]🤖 DSPy-Powered SCA Scanner Results[/bold green]")
     rprint(f"⏱️  Scan duration: {duration:.1f} seconds")
     rprint(f"🧠 AI Model: {results.scan_metadata.get('model', 'Unknown')}")
+    rprint(f"{mode_icon} Analysis Mode: {analysis_mode.replace('_', ' ').title()}")
     rprint(f"📦 Packages analyzed: {summary.total_packages_analyzed}")
     rprint(f"🚨 Vulnerabilities: {summary.vulnerable_packages}")
     
@@ -676,9 +682,9 @@ def print_table_results(results: VulnerabilityResults, duration: float):
     console.print(table)
     
     # Next steps
-    rprint(f"\n[bold cyan]🎯 AI Agent Intelligence Output:[/bold cyan]")
-    rprint("📋 Vulnerability data: Ready for AI agent consumption")
-    rprint("🤖 Remediation-ready: Data optimized for specialized remediation AI agents")
+    rprint(f"\n[bold cyan]🎯 DSPy-Powered Intelligence Output:[/bold cyan]")
+    rprint("📋 Structured Analysis: DSPy-powered vulnerability detection with reasoning")
+    rprint("🤖 Agent-Ready: Data optimized for downstream AI processing")
     rprint("✅ Completeness: ALL vulnerabilities and source locations included - NO SAMPLING")
     
     for step in summary.recommended_next_steps:

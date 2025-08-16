@@ -1,0 +1,13 @@
+# Python test case with known vulnerabilities
+# Each package has documented CVEs for validation
+
+Django==2.2.10     # CVE-2020-7471, CVE-2020-9402
+Flask==0.12.2      # CVE-2018-1000656, CVE-2019-1010083  
+requests==2.19.1   # CVE-2018-18074
+PyYAML==5.1        # CVE-2020-1747, CVE-2020-14343
+urllib3==1.24.1    # CVE-2019-11324, CVE-2020-26137
+Jinja2==2.10       # CVE-2019-10906, CVE-2020-28493
+Werkzeug==0.15.2   # CVE-2020-28724
+cryptography==2.8  # CVE-2020-36242
+Pillow==6.2.1      # CVE-2020-5312, CVE-2020-5313
+numpy==1.16.0      # CVE-2019-6446

@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "test_name": "js-direct-vulns",
+    "description": "Direct JavaScript dependency vulnerabilities for SCA tool validation",
+    "created": "2024-01-15",
+    "language": "javascript",
+    "package_manager": "npm"
+  },
+  "expected_vulnerabilities": [
+    {
+      "package": "lodash",
+      "current_version": "4.17.19",
+      "vulnerability": {
+        "cve": "CVE-2020-28500",
+        "cwe": "CWE-1321",
+        "severity": "high",
+        "cvss_score": 7.5,
+        "description": "Prototype pollution vulnerability allowing property injection"
+      },
+      "remediation": {
+        "fixed_version": "4.17.21",
+        "breaking_changes": false,
+        "update_command": "npm install lodash@4.17.21",
+        "effort": "low"
+      }
+    },
+    {
+      "package": "minimist",
+      "current_version": "0.0.8",
+      "vulnerability": {
+        "cve": "CVE-2020-7598",
+        "cwe": "CWE-1321",
+        "severity": "medium",
+        "cvss_score": 5.3,
+        "description": "Prototype pollution vulnerability in argument parsing"
+      },
+      "remediation": {
+        "fixed_version": "1.2.6",
+        "breaking_changes": true,
+        "update_command": "npm install minimist@1.2.6",
+        "effort": "medium",
+        "breaking_change_notes": "Major version change may affect argument parsing behavior"
+      }
+    },
+    {
+      "package": "serialize-javascript",
+      "current_version": "2.1.2",
+      "vulnerability": {
+        "cve": "CVE-2020-7660",
+        "cwe": "CWE-502",
+        "severity": "high",
+        "cvss_score": 8.8,
+        "description": "Remote code execution via unsafe deserialization"
+      },
+      "remediation": {
+        "fixed_version": "3.1.0",
+        "breaking_changes": false,
+        "update_command": "npm install serialize-javascript@3.1.0",
+        "effort": "low"
+      }
+    },
+    {
+      "package": "kind-of",
+      "current_version": "6.0.2",
+      "vulnerability": {
+        "cve": "CVE-2019-20149",
+        "cwe": "CWE-843",
+        "severity": "medium",
+        "cvss_score": 5.3,
+        "description": "Type confusion vulnerability"
+      },
+      "remediation": {
+        "fixed_version": "6.0.3",
+        "breaking_changes": false,
+        "update_command": "npm install kind-of@6.0.3",
+        "effort": "low"
+      }
+    },
+    {
+      "package": "dot-prop",
+      "current_version": "4.2.0",
+      "vulnerability": {
+        "cve": "CVE-2020-8116",
+        "cwe": "CWE-1321",
+        "severity": "high",
+        "cvss_score": 7.5,
+        "description": "Prototype pollution in property paths"
+      },
+      "remediation": {
+        "fixed_version": "5.3.0",
+        "breaking_changes": true,
+        "update_command": "npm install dot-prop@5.3.0",
+        "effort": "medium",
+        "breaking_change_notes": "API changes in v5"
+      }
+    },
+    {
+      "package": "yargs-parser",
+      "current_version": "13.0.0",
+      "vulnerability": {
+        "cve": "CVE-2020-7608",
+        "cwe": "CWE-1321",
+        "severity": "medium",
+        "cvss_score": 5.3,
+        "description": "Prototype pollution in parser"
+      },
+      "remediation": {
+        "fixed_version": "18.1.3",
+        "breaking_changes": true,
+        "update_command": "npm install yargs-parser@18.1.3",
+        "effort": "high",
+        "breaking_change_notes": "Major version changes with significant API updates"
+      }
+    },
+    {
+      "package": "ini",
+      "current_version": "1.3.5",
+      "vulnerability": {
+        "cve": "CVE-2020-7788",
+        "cwe": "CWE-1321",
+        "severity": "high",
+        "cvss_score": 7.5,
+        "description": "Prototype pollution in INI parser"
+      },
+      "remediation": {
+        "fixed_version": "1.3.8",
+        "breaking_changes": false,
+        "update_command": "npm install ini@1.3.8",
+        "effort": "low"
+      }
+    },
+    {
+      "package": "node-fetch",
+      "current_version": "2.6.0",
+      "vulnerability": {
+        "cve": "CVE-2020-15168",
+        "cwe": "CWE-400",
+        "severity": "medium",
+        "cvss_score": 5.3,
+        "description": "Size limit bypass vulnerability"
+      },
+      "remediation": {
+        "fixed_version": "2.6.7",
+        "breaking_changes": false,
+        "update_command": "npm install node-fetch@2.6.7",
+        "effort": "low"
+      }
+    }
+  ],
+  "statistics": {
+    "total_vulnerabilities": 8,
+    "by_severity": {
+      "critical": 0,
+      "high": 4,
+      "medium": 4,
+      "low": 0
+    },
+    "fixable": 8,
+    "breaking_changes": 3,
+    "average_cvss": 6.4
+  },
+  "test_expectations": {
+    "minimum_detection_rate": 0.95,
+    "acceptable_false_positives": 0,
+    "scan_time_limit_seconds": 60,
+    "should_detect_all_cves": true,
+    "should_recommend_fixes": true,
+    "should_identify_breaking_changes": true
+  }
+}
