@@ -41,6 +41,7 @@ dependencies = [
     "asyncio-throttle>=1.0.2",
     "jsonschema>=4.17.0",
     "tenacity>=8.2.0",
+    "dspy-ai>=2.4.0",
 ]
 
 [project.optional-dependencies]
